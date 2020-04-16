@@ -23,7 +23,7 @@ Configure a VNC-specific password containing 6 to 8 characters for this user. Do
 
 `vncpasswd`
 
-##Configure to always start the VNC Server at boot time:
+### Configure to always start the VNC Server at boot time:
 
 Create a new systemd unit
 
