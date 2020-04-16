@@ -62,7 +62,7 @@ Add a firewall rule to open 5901 port
 
 `sudo yum install libguac-client-vnc libguac-client-ssh libguac-client-rdp`
 
-## Install Apache Maven
+## Install Apache Maven (Optional)
 
 `sudo wget http://ftp.meisei-u.ac.jp/mirror/apache/dist/maven/maven-3/3.6.3/binaries/apache-maven-3.6.3-bin.tar.gz`
 
@@ -108,22 +108,65 @@ Start Tomcat
 
 `sudo systemctl start tomcat`
 
-## Install Guacamole Client
+## Configure Guacamole
 
-`sudo su -`
+`sudo mkdir /etc/guacamole`
 
-`ldconfig`
+`sudo nano /etc/guacamole.properties`
 
-wget https://www.apache.org/dist/guacamole/1.0.0/source/guacamole-client-1.0.0.tar.gz
+Paste the bollowing lines
 
-tar -xzf guacamole-client-1.0.0.tar.gz
+`# Hostname and port of guacamole proxy`
 
-cd guacamole-client-1.0.0/
+`guacd-hostname:      localhost`
 
-git clone git://github.com/apache/guacamole-client.git
+`guacd-port:          4822`
 
-`mvn package`
+`available-languages: en, de`
+ 
+`auth-provider: net.sourceforge.guacamole.net.basic.BasicFileAuthenticationProvider`
 
-`cp guacamole.war /var/lib/tomcat/webapps`
+`basic-user-mapping: /etc/guacamole/user-mapping.xml`
 
-cp guacamole/target/guacamole-1.0.0.war /var/lib/tomcat/webapps/guacamole.war
+Create the file user-mapping.xml
+
+`sudo nano /etc/guacamole/usermapping.xml`
+
+  <authorize username="USERNAME" password="PASSWORD">
+    <!--
+    <connection name="Debian2: RDP Connection">
+      <protocol>rdp</protocol>
+      <param name="hostname">localhost</param>
+      <param name="port">3389</param>
+    </connection>
+    -->
+ 
+    <connection name="Debian2: VNC Connection">
+      <protocol>vnc</protocol>
+      <param name="hostname">localhost</param>
+      <param name="port">5901</param>
+      <param name="password">vagrant</param>
+    </connection>
+ 
+    <connection name="Debian2: SSH Connection">
+      <protocol>ssh</protocol>
+      <param name="hostname">localhost</param>
+      <param name="port">22</param>
+      <param name="username">vagrant</param>
+    </connection>
+ 
+    <connection name="Debian1: SSH Connection">
+      <protocol>ssh</protocol>
+      <param name="hostname">192.168.10.5</param>
+      <param name="port">22</param>
+      <param name="username">vagrant</param>
+    </connection>
+ 
+    <connection name="Debian2: Telnet Connection">
+      <protocol>telnet</protocol>
+      <param name="hostname">localhost</param>
+      <param name="port">23</param>
+      <param name="username">vagrant</param>
+    </connection>
+  </authorize>
+</user-mapping>
