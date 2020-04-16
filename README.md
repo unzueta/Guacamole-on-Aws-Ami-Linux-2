@@ -44,3 +44,9 @@ Start the service
 
 `sudo systemctl start vncserver@:1`
 
+Add a firewall rule to open 5901 port
+
+`sudo iptables -A INPUT -m state --state NEW -m tcp -p tcp --dport 5901 -j ACCEPT`
+
+
+
