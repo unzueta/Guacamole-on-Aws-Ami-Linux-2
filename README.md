@@ -48,6 +48,14 @@ Start the service
 Add a firewall rule to open 5901 port
 
 `sudo iptables -A INPUT -m state --state NEW -m tcp -p tcp --dport 5901 -j ACCEPT`
+## Install Guacamole
 
+`sudo amazon-linux-extras install epel`
+
+`sudo yum install epel-release`
+
+`sudo yum install guacamole guacd`
+
+`sudo yum install libguac-client-vnc libguac-client-ssh libguac-client-rdp`
 
 
