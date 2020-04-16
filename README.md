@@ -171,7 +171,9 @@ basic-user-mapping: /etc/guacamole/user-mapping.xml
 
 Create a symlink to tomcat
 
-`sudo ln -s /etc/guacamole/guacamole.properties /usr/share/tomcat/lib/`
+`sudo mkdir /usr/share/tomcat/.guacamole`
+
+`sudo ln -s /etc/guacamole/guacamole.properties /usr/share/tomcat/.guacamole/`
 
 Start guacamole
 
