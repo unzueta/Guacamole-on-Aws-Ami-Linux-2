@@ -1,5 +1,5 @@
 # GuacamoleOnAwsAmi2
-How to setup Guacamole in Aws Ami 2 Ec2
+How to setup Guacamole in Aws Ami Linux 2 Ec2
 
 ## Update your instance
 
@@ -58,7 +58,7 @@ Add a firewall rule to open 5901 port
 
 `sudo yum install libguac-client-vnc libguac-client-ssh libguac-client-rdp`
 
-##Install Tomcat
+## Install Tomcat
 
 `sudo amazon-linux-extras install tomcat8.5`
 
