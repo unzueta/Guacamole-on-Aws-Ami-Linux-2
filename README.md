@@ -173,3 +173,6 @@ Create a symlink to tomcat
 
 `sudo ln -s /etc/guacamole/guacamole.properties /usr/share/tomcat/lib/`
 
+Start guacamole
+
+ `sudo guacd start`
