@@ -112,22 +112,21 @@ Start Tomcat
 
 `sudo mkdir /etc/guacamole`
 
-`sudo nano /etc/guacamole.properties`
+#Create the file guacamole.properties
+
+`sudo nano /etc/guacamole/guacamole.properties`
 
 Paste the bollowing lines
 
-`# Hostname and port of guacamole proxy`
+```# Hostname and port of guacamole proxy
 guacd-hostname:      localhost
-
 guacd-port:          4822
-
 available-languages: en, de
-
 auth-provider: net.sourceforge.guacamole.net.basic.BasicFileAuthenticationProvider
-
 basic-user-mapping: /etc/guacamole/user-mapping.xml
+```
 
-Create the file user-mapping.xml
+#Create the file user-mapping.xml
 
 `sudo nano /etc/guacamole/usermapping.xml`
 
@@ -169,3 +168,8 @@ Create the file user-mapping.xml
     </connection>
   </authorize>
 </user-mapping>
+
+Create a symlink to tomcat
+
+`sudo ln -s /etc/guacamole/guacamole.properties /usr/share/tomcat/lib/`
+
