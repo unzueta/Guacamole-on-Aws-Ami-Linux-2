@@ -117,13 +117,14 @@ Start Tomcat
 Paste the bollowing lines
 
 `# Hostname and port of guacamole proxy`
-
-# Hostname and port of guacamole proxy
 guacd-hostname:      localhost
+
 guacd-port:          4822
+
 available-languages: en, de
 
 auth-provider: net.sourceforge.guacamole.net.basic.BasicFileAuthenticationProvider
+
 basic-user-mapping: /etc/guacamole/user-mapping.xml
 
 Create the file user-mapping.xml
