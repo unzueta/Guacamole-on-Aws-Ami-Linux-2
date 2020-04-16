@@ -34,6 +34,7 @@ Replace all occurrences of <USER> in the new unit with ec2-user
 `sudo sed -i 's/<USER>/ec2-user/' /etc/systemd/system/vncserver@.service`
 
 Reload the systemd manager configuration
+
 `sudo systemctl daemon-reload`
 
 Enable the service
