@@ -94,6 +94,12 @@ Load the environment variables
 
 `source /etc/profile.d/maven.sh`
 
+# Download Guacamole client
+
+`wget https://downloads.apache.org/guacamole/1.0.0/binary/guacamole-1.0.0.war`
+
+`sudo mv guacamole-1.0.0.war /var/lib/tomcat/webapps/guacamole.war`
+
 ## Install Tomcat
 
 `sudo amazon-linux-extras install tomcat8.5`
