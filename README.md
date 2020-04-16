@@ -58,4 +58,12 @@ Add a firewall rule to open 5901 port
 
 `sudo yum install libguac-client-vnc libguac-client-ssh libguac-client-rdp`
 
+##Install Tomcat
+
+`sudo amazon-linux-extras install tomcat8.5`
+
+Start Tomcat
+
+`sudo systemctl start tomcat`
+
 
