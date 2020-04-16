@@ -52,7 +52,11 @@ Start the service
 Add a firewall rule to open 5901 port
 
 `sudo iptables -A INPUT -m state --state NEW -m tcp -p tcp --dport 5901 -j ACCEPT`
-## Install Guacamole
+## Install Guacamole Server
+
+`sudo yum install -y https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm`
+
+`sudo yum-config-manager --enable epel`
 
 `sudo amazon-linux-extras install epel`
 
