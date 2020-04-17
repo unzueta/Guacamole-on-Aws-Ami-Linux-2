@@ -96,9 +96,9 @@ Load the environment variables
 
 # Download Guacamole client
 
-`wget https://downloads.apache.org/guacamole/1.0.0/binary/guacamole-1.0.0.war`
+`wget https://downloads.apache.org/guacamole/1.1.0/binary/guacamole-1.1.0.war`
 
-`sudo mv guacamole-1.0.0.war /var/lib/tomcat/webapps/guacamole.war`
+`sudo mv guacamole-1.1.0.war /var/lib/tomcat/webapps/guacamole.war`
 
 ## Install Tomcat
 
