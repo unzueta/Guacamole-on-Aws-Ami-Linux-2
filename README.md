@@ -58,10 +58,6 @@ Add a firewall rule to open 5901 port
 
 `sudo yum-config-manager --enable epel`
 
-`sudo amazon-linux-extras install epel`
-
-`sudo yum install epel-release`
-
 `sudo yum install guacamole guacd`
 
 `sudo yum install libguac-client-vnc libguac-client-ssh libguac-client-rdp`
