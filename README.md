@@ -62,37 +62,7 @@ Add a firewall rule to open 5901 port
 
 `sudo yum install libguac-client-vnc libguac-client-ssh libguac-client-rdp`
 
-## Install Apache Maven (Optional)
-
-`sudo wget http://ftp.meisei-u.ac.jp/mirror/apache/dist/maven/maven-3/3.6.3/binaries/apache-maven-3.6.3-bin.tar.gz`
-
-`sudo tar -xzvf apache-maven-3.6.3-bin.tar.gz -C /opt`
-
-`cd /opt/`
-
-$ sudo ln -s /opt/apache-maven-3.6.3 maven
-
-`sudo nano /etc/profile.d/maven.sh`
-
-Paste the following configuration
-
-`export JAVA_HOME=/usr/lib/jvm/java`
-
-`export M2_HOME=/opt/maven`
-
-`export MAVEN_HOME=/opt/maven`
-
-`export PATH=${M2_HOME}/bin:${PATH}`
-
-Save and close the file. This script will be sourced at shell startup.
-
-Make the script executable with chmod
-
-`sudo chmod +x /etc/profile.d/maven.sh`
-
-Load the environment variables
-
-`source /etc/profile.d/maven.sh`
+`sudo systemctl start guacd`
 
 # Download Guacamole client
 
