@@ -132,10 +132,14 @@ guacd-port:          4822
 ```
 <user-mapping>
   <authorize username="USERNAME" password="PASSWORD">
-    <connection name="Debian2: RDP Connection">
+    <connection name="Windows: RDP Connection">
       <protocol>rdp</protocol>
-      <param name="hostname">localhost</param>
+      <param name="hostname">192.168.10.1</param>
       <param name="port">3389</param>
+      <param name="username">User</param>
+      <param name="password">PassUsr</param>
+      <param name="ignore-cert">true</param>
+      <param name="console">true</param>
     </connection>
  
     <connection name="Debian2: VNC Connection">
@@ -174,10 +178,18 @@ Change premissions and Owner
 
 `sudo chown tomcat:tomcat usr/share/tomcat/.guacamole/user-mapping.xml`
 
-Start guacamole
+## Start guacamole
 
+ `sudo service guacd stop`
+ 
  `sudo service guacd start`
  
- Restart Tomcat
+ # Running gucad in Debug mode
+ 
+ `sudo service gucad stop`
+ 
+ `sudo gucad -L debug -f'
+ 
+ ## Restart Tomcat
  
  `sudo service tomcat restart`
