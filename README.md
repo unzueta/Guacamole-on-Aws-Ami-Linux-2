@@ -1,4 +1,4 @@
-# GuacamoleOnAwsAmi2
+# Guacamole on Aws Ami Linux 2
 How to setup Guacamole in Aws Ami Linux 2 Ec2
 
 ## Update your instance
