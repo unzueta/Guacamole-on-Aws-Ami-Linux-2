@@ -114,23 +114,24 @@ Start Tomcat
 
 #Create the file guacamole.properties
 
-`sudo nano /etc/guacamole/guacamole.properties`
+`sudo nano /usr/share/tomcat/.guacamole/guacamole.properties`
 
 Paste the bollowing lines
 
 ```# Hostname and port of guacamole proxy
 guacd-hostname:      localhost
 guacd-port:          4822
-available-languages: en, de
-auth-provider: net.sourceforge.guacamole.net.basic.BasicFileAuthenticationProvider
-basic-user-mapping: /etc/guacamole/user-mapping.xml
 ```
 
 #Create the file user-mapping.xml
 
-`sudo nano /etc/guacamole/usermapping.xml`
+`sudo mkdir /usr/share/tomcat/.guacamole`
 
-  ```<authorize username="USERNAME" password="PASSWORD">
+`sudo nano /usr/share/tomcat/.guacamole/user-mapping.xml`
+
+```
+<user-mapping>
+  <authorize username="USERNAME" password="PASSWORD">
     <connection name="Debian2: RDP Connection">
       <protocol>rdp</protocol>
       <param name="hostname">localhost</param>
@@ -167,13 +168,16 @@ basic-user-mapping: /etc/guacamole/user-mapping.xml
   </authorize>
 </user-mapping>
 ```
+Change premissions and Owner
 
-Create a symlink to tomcat
+`sudo chmod 600 usr/share/tomcat/.guacamole/user-mapping.xml`
 
-`sudo mkdir /usr/share/tomcat/.guacamole`
-
-`sudo ln -s /etc/guacamole/guacamole.properties /usr/share/tomcat/.guacamole/`
+`sudo chown tomcat:tomcat usr/share/tomcat/.guacamole/user-mapping.xml`
 
 Start guacamole
 
- `sudo guacd start`
+ `sudo service guacd start`
+ 
+ Restart Tomcat
+ 
+ `sudo service tomcat restart`
