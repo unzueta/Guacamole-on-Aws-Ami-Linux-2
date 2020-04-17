@@ -130,14 +130,12 @@ basic-user-mapping: /etc/guacamole/user-mapping.xml
 
 `sudo nano /etc/guacamole/usermapping.xml`
 
-  <authorize username="USERNAME" password="PASSWORD">
-    <!--
+  ```<authorize username="USERNAME" password="PASSWORD">
     <connection name="Debian2: RDP Connection">
       <protocol>rdp</protocol>
       <param name="hostname">localhost</param>
       <param name="port">3389</param>
     </connection>
-    -->
  
     <connection name="Debian2: VNC Connection">
       <protocol>vnc</protocol>
@@ -168,6 +166,7 @@ basic-user-mapping: /etc/guacamole/user-mapping.xml
     </connection>
   </authorize>
 </user-mapping>
+```
 
 Create a symlink to tomcat
 
