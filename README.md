@@ -80,7 +80,7 @@ Start Tomcat
 
 ## Configure Guacamole
 
-`sudo mkdir /etc/guacamole`
+`sudo mkdir /usr/share/tomcat/.guacamole`
 
 #Create the file guacamole.properties
 
