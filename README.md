@@ -54,11 +54,9 @@ Add a firewall rule to open 5901 port
 
 `sudo yum-config-manager --enable epel`
 
-`sudo yum install guacamole guacd`
+`sudo yum install guacd`
 
 `sudo yum install libguac-client-vnc libguac-client-ssh libguac-client-rdp`
-
-`sudo systemctl start guacd`
 
 ## Install Tomcat
 
@@ -69,10 +67,6 @@ Add a firewall rule to open 5901 port
 `wget https://downloads.apache.org/guacamole/1.1.0/binary/guacamole-1.1.0.war`
 
 `sudo mv guacamole-1.1.0.war /var/lib/tomcat/webapps/guacamole.war`
-
-Start Tomcat
-
-`sudo systemctl start tomcat`
 
 ## Configure Guacamole
 
@@ -148,7 +142,15 @@ Change premissions and Owner
  
  `sudo service guacd start`
  
- # Running gucad in Debug mode
+ ## Auto start Guacamole
+ 
+ `sudo systemctl start guacd`
+ 
+ ## Auto start Tomcat
+
+`sudo systemctl start tomcat`
+ 
+ ## Running gucad in Debug mode
  
  `sudo service guacd stop`
  
