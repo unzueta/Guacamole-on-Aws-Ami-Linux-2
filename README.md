@@ -78,7 +78,7 @@ Start Tomcat
 
 `sudo mkdir /usr/share/tomcat/.guacamole`
 
-#Create the file guacamole.properties
+# Create the file guacamole.properties
 
 `sudo nano /usr/share/tomcat/.guacamole/guacamole.properties`
 
@@ -89,9 +89,7 @@ guacd-hostname:      localhost
 guacd-port:          4822
 ```
 
-#Create the file user-mapping.xml
-
-`sudo mkdir /usr/share/tomcat/.guacamole`
+# Create the file user-mapping.xml
 
 `sudo nano /usr/share/tomcat/.guacamole/user-mapping.xml`
 
