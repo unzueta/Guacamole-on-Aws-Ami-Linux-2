@@ -60,7 +60,7 @@ Add a firewall rule to open 5901 port
 
 `sudo systemctl start guacd`
 
-# Download Guacamole client
+## Download Guacamole client
 
 `wget https://downloads.apache.org/guacamole/1.1.0/binary/guacamole-1.1.0.war`
 
