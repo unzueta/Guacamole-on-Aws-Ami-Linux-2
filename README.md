@@ -60,15 +60,15 @@ Add a firewall rule to open 5901 port
 
 `sudo systemctl start guacd`
 
+## Install Tomcat
+
+`sudo amazon-linux-extras install tomcat8.5`
+
 ## Download Guacamole client
 
 `wget https://downloads.apache.org/guacamole/1.1.0/binary/guacamole-1.1.0.war`
 
 `sudo mv guacamole-1.1.0.war /var/lib/tomcat/webapps/guacamole.war`
-
-## Install Tomcat
-
-`sudo amazon-linux-extras install tomcat8.5`
 
 Start Tomcat
 
