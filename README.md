@@ -156,9 +156,9 @@ Change premissions and Owner
  
  # Running gucad in Debug mode
  
- `sudo service gucad stop`
+ `sudo service guacd stop`
  
- `sudo gucad -L debug -f'
+ `sudo guacd -L debug -f'
  
  ## Restart Tomcat
  
