@@ -151,6 +151,10 @@ Change owner
 
 `sudo chown guacd:guacd /rdpxchange`
 
+## Install Ghostscript (Optional)
+
+`sudo yum install ghostscript`
+
 ## Start guacamole
 
  `sudo service guacd stop`
