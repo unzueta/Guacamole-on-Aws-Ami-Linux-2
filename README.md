@@ -97,7 +97,14 @@ guacd-port:          4822
       <param name="username">User</param>
       <param name="password">PassUsr</param>
       <param name="ignore-cert">true</param>
-      <param name="console">true</param>
+      <param name="console">false</param>
+      <param name="cursor">remote</param>
+      <param name="enable-printing">true</param>
+      <param name="color-depth">16</param>
+      <param name="enable-drive">true</param>
+      <param name="drive-path">/rdpxchange</param>
+      <param name="width">1920</param>
+      <param name="height">1440</param>
     </connection>
  
     <connection name="Debian2: VNC Connection">
@@ -136,7 +143,7 @@ Change premissions and Owner
 
 `sudo chown tomcat:tomcat usr/share/tomcat/.guacamole/user-mapping.xml`
 
-Create a folde for RDP 
+## Create a folder for RDP (Optional)
 
 `sudo mkdir /rdpxchange`
 
