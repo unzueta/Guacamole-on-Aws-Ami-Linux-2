@@ -137,9 +137,7 @@ guacd-port:          4822
   </authorize>
 </user-mapping>
 ```
-Change premissions and Owner
-
-`sudo chmod 600 usr/share/tomcat/.guacamole/user-mapping.xml`
+Change Owner
 
 `sudo chown tomcat:tomcat usr/share/tomcat/.guacamole/user-mapping.xml`
 
@@ -154,6 +152,16 @@ Change owner
 ## Install Ghostscript (Optional)
 
 `sudo yum install ghostscript`
+
+## Rebrand Guacamole
+
+Download branding.jar from https://github.com/Zer0CoolX/guacamole-customize-loginscreen-extension
+
+`sudo mkdir ~tomcat/.guacamole/extensions`
+
+`sudo chown guacd:guacd ~tomcat/.guacamole/extensions`
+
+Decompress brandin.jar, customize, compress and upload to ~tomcat/.guacamole/extensions
 
 ## Start guacamole
 
