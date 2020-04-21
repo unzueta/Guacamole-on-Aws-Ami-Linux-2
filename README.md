@@ -136,6 +136,14 @@ Change premissions and Owner
 
 `sudo chown tomcat:tomcat usr/share/tomcat/.guacamole/user-mapping.xml`
 
+Create a folde for RDP 
+
+`sudo mkdir /rdpxchange`
+
+Change owner
+
+`sudo chown guacd:guacd /rdpxchange`
+
 ## Start guacamole
 
  `sudo service guacd stop`
