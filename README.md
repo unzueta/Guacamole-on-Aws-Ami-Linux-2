@@ -161,7 +161,15 @@ Download branding.jar from https://github.com/Zer0CoolX/guacamole-customize-logi
 
 `sudo chown guacd:guacd ~tomcat/.guacamole/extensions`
 
-Decompress brandin.jar, customize, compress and upload to ~tomcat/.guacamole/extensions
+Decompress brandin.jar, customize, compress 
+
+Upload to ~tomcat/.guacamole/extensions
+
+`sudo wget https://github.com/Zer0CoolX/guacamole-customize-loginscreen-extension/blob/master/branding.jar`
+
+mv branding.jar ~tomcat/.guacamole/extensions/branding.jar
+
+`sudo chown guacd:guacd ~tomcat/.guacamole/extensions/branding.jar`
 
 ## Start guacamole
 
