@@ -189,7 +189,7 @@ mv branding.jar ~tomcat/.guacamole/extensions/branding.jar
  
  `sudo service guacd stop`
  
- `sudo guacd -L debug -f'
+ `sudo guacd -L debug -f`
  
  ## Restart Tomcat
  
